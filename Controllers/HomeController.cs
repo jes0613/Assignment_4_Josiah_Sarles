@@ -1,4 +1,4 @@
-﻿using Assignment_3_Josiah_Sarles.Models;
+﻿using Assignment_4_Josiah_Sarles.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Assignment_3_Josiah_Sarles.Controllers
+namespace Assignment_4_Josiah_Sarles.Controllers
 {
     public class HomeController : Controller
     {
@@ -23,27 +23,23 @@ namespace Assignment_3_Josiah_Sarles.Controllers
             return View();
         }
 
-        public IActionResult Podcasts()
+        public IActionResult UserRestaurants()
         {
-            return View();
-        }
-        public IActionResult Movies()
-        {
-            return View(TempStorage.Movies);
+            return View(TempStorage.Restaurants);
         }
 
         [HttpGet]
-        public IActionResult MoviesForm()
+        public IActionResult RestaurantsForm()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult MoviesForm(AddMovie appResponse)
+        public IActionResult RestaurantsForm(AddRestaurant appResponse)
         {
             if (ModelState.IsValid)
             {
-                TempStorage.AddMovie(appResponse);
+                TempStorage.AddRestaurant(appResponse);
                 return View("Confirm", appResponse);
             }
             else

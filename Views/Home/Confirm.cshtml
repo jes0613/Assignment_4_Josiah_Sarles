@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "The Joel Hilton Film Collection";
+    ViewBag.Dash = " - ";
+    ViewBag.SubTitle = "Movie Added";
+    ViewBag.MovieName = Model.title;
+}
+@model Assignment_3_Josiah_Sarles.Models.AddMovie
+
+<h1>@ViewBag.SubTitle!</h1>
+
+<p>You have added @ViewBag.MovieName to my collection.</p>
+
+<h2>Would you like to add another movie or see the collection?</h2>
+
+<a class="nav-link text-dark" asp-controller="Home" asp-action="MoviesForm">Add another Movie</a>
+
+<a class="nav-link text-dark" asp-controller="Home" asp-action="Movies">See Movie Collection</a>
+

@@ -20,7 +20,13 @@ namespace Assignment_4_Josiah_Sarles.Controllers
 
         public IActionResult Index()
         {
-            return View(Restaurant);
+            List<string> restaurantlist = new List<string>();
+
+            foreach (Restaurant r in Restaurant.GetRestaurants())
+            {
+                restaurantlist.Add($"#{r.rank}: {r.name}, Favorite Dish: {r.favdish}, Address: {r.address}, Phone: {r.phone}, Website: {r.website}");
+            }
+            return View(restaurantlist);
         }
 
         public IActionResult UserRestaurants()

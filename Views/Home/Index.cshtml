@@ -1,10 +1,10 @@
 ﻿@{
     ViewBag.Title = "Provo's Top 5 Restaurants";
     ViewBag.Dash = " - ";
-    ViewBag.SubTitle = "";
+    ViewBag.SubTitle = "Home";
 }
 
-@model IEnumerable<> 
+@model IEnumerable<string> 
 
 <div class="text-center">
     <h1 class="display-4">@ViewBag.Title</h1>
@@ -12,9 +12,12 @@
 
 <div>
     <ul>
+    @foreach (string r in Model)
+    {
         <li>
-
+            @r
         </li>
+    }
     </ul>
 
 </div>

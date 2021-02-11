@@ -20,7 +20,7 @@ namespace Assignment_4_Josiah_Sarles.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(Restaurant);
         }
 
         public IActionResult UserRestaurants()

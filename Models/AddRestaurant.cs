@@ -9,7 +9,7 @@ namespace Assignment_4_Josiah_Sarles.Models
     public class AddRestaurant
     {
         [Required(ErrorMessage = "Please enter a rank")]
-        public string rank { get; set; }
+        public int rank { get; set; }
 
         [Required(ErrorMessage = "Please enter the restaurant name")]
         public string name { get; set; }
